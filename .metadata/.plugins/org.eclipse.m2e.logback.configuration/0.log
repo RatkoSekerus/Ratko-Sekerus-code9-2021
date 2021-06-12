@@ -352,3 +352,33 @@
 2021-06-13 00:26:05,181 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-06-13 00:26:05,181 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-06-13 00:26:05,181 [Worker-46: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/codebind/Desktop/leviDevet/Admin-service/src/test/resources
+2021-06-13 00:40:38,892 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2021-06-13 00:40:51,462 [Worker-14: Check for devtools] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/TennisJPA: TennisJPA:TennisJPA:0.0.1-SNAPSHOT with classifier  to /TennisJPA/target/classes
+2021-06-13 00:41:02,100 [Worker-1: Launching Admin-service - AdminServiceApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-06-13 00:41:02,104 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-13 00:41:02,112 [Worker-1: Launching Admin-service - AdminServiceApplication] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2021-06-13 00:41:02,113 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/codebind/Desktop/git/TennisJPA/src/test/resources
+2021-06-13 00:41:03,016 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-13 00:41:03,017 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-06-13 00:41:03,018 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-13 00:41:03,039 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-13 00:41:03,042 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-13 00:41:03,042 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-06-13 00:41:03,042 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/codebind/Desktop/git/Admin-service/src/test/resources
+2021-06-13 00:41:03,779 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/TennisJPA: TennisJPA:TennisJPA:0.0.1-SNAPSHOT with classifier null to /TennisJPA/target/classes
+2021-06-13 00:41:03,946 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/TennisJPA: TennisJPA:TennisJPA:0.0.1-SNAPSHOT with classifier null to /TennisJPA/target/classes
+2021-06-13 00:41:04,085 [Worker-1: Launching Admin-service - AdminServiceApplication] INFO  o.e.m.c.i.p.WorkspaceClassifierResolverManager - Resolving P/TennisJPA: TennisJPA:TennisJPA:0.0.1-SNAPSHOT with classifier null to /TennisJPA/target/classes
+2021-06-13 00:44:27,015 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-13 00:44:27,016 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-06-13 00:44:27,018 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-13 00:44:27,079 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-13 00:44:27,083 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-13 00:44:27,083 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-06-13 00:44:27,083 [Worker-8: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/codebind/Desktop/git/Admin-service/src/test/resources
+2021-06-13 00:45:07,733 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-13 00:45:07,733 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-06-13 00:45:07,734 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-06-13 00:45:07,762 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2021-06-13 00:45:07,764 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-06-13 00:45:07,764 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-06-13 00:45:07,764 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/codebind/Desktop/git/Admin-service/src/test/resources

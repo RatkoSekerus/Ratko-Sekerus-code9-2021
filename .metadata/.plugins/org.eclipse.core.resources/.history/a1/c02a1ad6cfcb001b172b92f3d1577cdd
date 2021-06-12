@@ -33,7 +33,7 @@ public class AdminController {
 		return new ResponseEntity<>(ta,HttpStatus.OK);
 	}
 	
-	@GetMapping()
+	@GetMapping("addAdmin")
 	public ResponseEntity<List<TennisAdmin>> admins() {
 		List<TennisAdmin> ta = adminService.admins();
 		return new ResponseEntity<>(ta,HttpStatus.OK);

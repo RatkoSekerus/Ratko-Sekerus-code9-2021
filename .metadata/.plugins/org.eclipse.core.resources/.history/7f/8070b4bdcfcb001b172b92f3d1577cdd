@@ -1,11 +1,8 @@
 package com.example.demo.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -30,12 +27,6 @@ public class AdminController {
 	@PostMapping("addAdmin")
 	public ResponseEntity<TennisAdmin> addAdmin(@RequestBody TennisAdmin admin) {
 		TennisAdmin ta = adminService.addAdmin(admin);
-		return new ResponseEntity<>(ta,HttpStatus.OK);
-	}
-	
-	@GetMapping()
-	public ResponseEntity<List<TennisAdmin>> admins() {
-		List<TennisAdmin> ta = adminService.admins();
 		return new ResponseEntity<>(ta,HttpStatus.OK);
 	}
 
