@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.repository.AdminRepository;
-import com.example.demo.repository.CourtRepository;
+
 
 import model.TennisAdmin;
 import model.TennisCourt;
