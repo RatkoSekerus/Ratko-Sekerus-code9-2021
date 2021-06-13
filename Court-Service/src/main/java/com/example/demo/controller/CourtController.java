@@ -30,6 +30,12 @@ public class CourtController {
 		return new ResponseEntity<>(tc,HttpStatus.OK);
 	}
 	
+	@GetMapping("/{id}")
+	public ResponseEntity<TennisCourt> getCourtById(@PathVariable("id") Integer id) {
+		TennisCourt tc = courtService.getCourtById(id);
+		return new ResponseEntity<>(tc,HttpStatus.OK);
+	}
+	
 	@PostMapping("deleteCourt")
 	public ResponseEntity<TennisCourt> deleteCourt(@RequestBody TennisCourt court) {
 		try {

@@ -1,9 +1,12 @@
 package com.example.demo.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.service.PlayerService;
 
+import model.TennisAdmin;
+import model.TennisCourt;
 import model.TennisPlayer;
 
 @RestController
@@ -25,7 +30,11 @@ public class PlayerController {
 	@PostMapping("addPlayer")
 	public ResponseEntity<TennisPlayer> addPlayer(@RequestBody TennisPlayer player) {
 		TennisPlayer tp = playerService.addPlayer(player);
-		return new ResponseEntity<>(tp,HttpStatus.OK);
+		if (tp == null ) {
+		return new ResponseEntity<>(tp,HttpStatus.BAD_REQUEST);
+		} else {
+			return new ResponseEntity<>(tp,HttpStatus.OK);
+		}
 	}
 	
 	@PostMapping("deletePlayer")
@@ -47,5 +56,15 @@ public class PlayerController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 		
+	}
+	@GetMapping()
+	public ResponseEntity<List<TennisPlayer>> players() {
+		List<TennisPlayer> tp = playerService.players();
+		return new ResponseEntity<>(tp,HttpStatus.OK);
+	}
+	@GetMapping("/{id}")
+	public ResponseEntity<TennisPlayer> getPlayerById(@PathVariable("id") Integer id) {
+		TennisPlayer tp = playerService.getPlayerById(id);
+		return new ResponseEntity<>(tp,HttpStatus.OK);
 	}
 }
