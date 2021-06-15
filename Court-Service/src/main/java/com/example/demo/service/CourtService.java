@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import com.example.demo.repository.CourtRepository;
 
 import model.TennisCourt;
+import model.TennisPlayer;
 
 @Service
 public class CourtService {
@@ -41,5 +42,19 @@ public class CourtService {
 				.orElse(null);
 		return tc;
 	}
-	
+	public TennisCourt getCourtByName(String name) {
+		TennisCourt tp = ((Collection<TennisCourt>) courtRepository.findAll()).stream()
+				.filter(p -> p.getName().equals(name))
+				.findFirst()
+				.orElse(null);
+		return tp;
+	}
+	public Integer getCourtIDByName(String name) {
+		Integer tc = ((Collection<TennisCourt>) courtRepository.findAll()).stream()
+				.filter(t -> t.getName().equals(name))
+				.findFirst()
+				.map(t->t.getCourtID())
+				.orElse(null);
+		return tc;
+	}
 }

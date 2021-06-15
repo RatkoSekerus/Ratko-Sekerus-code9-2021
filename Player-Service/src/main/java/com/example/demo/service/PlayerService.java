@@ -44,5 +44,20 @@ public class PlayerService {
 				.orElse(null);
 		return tp;
 	}
+	public TennisPlayer getPlayerByEmail(String email) {
+		TennisPlayer tp = ((Collection<TennisPlayer>) playerRepository.findAll()).stream()
+				.filter(p -> p.getEmail().equals(email))
+				.findFirst()
+				.orElse(null);
+		return tp;
+	}
+	public Integer getPlayerIDByEmail(String email) {
+		Integer tp = ((Collection<TennisPlayer>) playerRepository.findAll()).stream()
+				.filter(p -> p.getEmail().equals(email))
+				.findFirst()
+				.map(p->p.getPlayerID())
+				.orElse(null);
+		return tp;
+	}
 	
 }
