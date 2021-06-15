@@ -29,8 +29,8 @@ public class TennisPlayer implements Serializable {
 	private String lastName;
 
 	//bi-directional many-to-one association to TennisReservation
-	@OneToMany(mappedBy="tennisPlayer")
-	private List<TennisReservation> tennisReservations;
+//	@OneToMany(mappedBy="tennisPlayer")
+//	private List<TennisReservation> tennisReservations;
 
 	public TennisPlayer() {
 	}
@@ -75,7 +75,7 @@ public class TennisPlayer implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public List<TennisReservation> getTennisReservations() {
+/*	public List<TennisReservation> getTennisReservations() {
 		return this.tennisReservations;
 	}
 
@@ -95,6 +95,6 @@ public class TennisPlayer implements Serializable {
 		tennisReservation.setTennisPlayer(null);
 
 		return tennisReservation;
-	}
+	} */
 
 }
