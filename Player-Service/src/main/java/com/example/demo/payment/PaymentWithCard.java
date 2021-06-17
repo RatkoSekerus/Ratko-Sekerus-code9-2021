@@ -30,12 +30,21 @@ public class PaymentWithCard extends Payment{
 	public void setMoney(int money) {
 		this.money = money;
 	}
+	public int getPlayerID() {
+		return playerID;
+	}
+
+	public void setPlayerID(int playerID) {
+		this.playerID = playerID;
+	}
 	public PaymentWithCard(int cardNumber, int ccv, int money, int playerID) {
 		super();
+
 		this.cardNumber = cardNumber;
 		this.ccv = ccv;
 		this.money = money;
 		this.playerID = playerID;
+		
 	}
 	
 	

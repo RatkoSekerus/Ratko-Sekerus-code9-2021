@@ -61,11 +61,16 @@ public class PlayerService {
 		return tp;
 	}
 	public void pay(Payment p) {
+		
 		int id = p.getPlayerID();
 		int money = p.getMoney();
-		System.out.println("servist");
+//	System.out.println(p.getCardNumber()+ " -------- "+ p.getCcv());
 		TennisPlayer tp = getPlayerById(id);
+		if ( tp.getMoney() != null ) {
 		playerRepository.updateMoney(money+tp.getMoney(), id);
+		} else {
+		playerRepository.updateMoney(money, id);
+		}
 		
 	}
 	

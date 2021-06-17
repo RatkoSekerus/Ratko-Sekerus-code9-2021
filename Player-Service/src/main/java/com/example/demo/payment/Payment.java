@@ -28,6 +28,10 @@ public class Payment {
 	public void setPlayerID(int playerID) {
 		this.playerID = playerID;
 	}
-	
-	
+	public int getCcv() {
+		return 0;
+	}
+	public int getCardNumber() {
+		return 0;
+	}
 }

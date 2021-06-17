@@ -47,6 +47,7 @@ public class PlayerController {
 	public ResponseEntity<TennisPlayer> addMoney(@RequestBody JsonForAllpayments paymentJson) {	
 		
 			if (paymentJson.getCardNumber() != 0 ) {
+			
 				payment = new PaymentWithCard(paymentJson.getCardNumber(),paymentJson.getCcv(),paymentJson.getMoney(),paymentJson.getPlayerID());
 			} else {
 				payment = new PaymentWithCache(paymentJson.getMoney(),paymentJson.getPlayerID());

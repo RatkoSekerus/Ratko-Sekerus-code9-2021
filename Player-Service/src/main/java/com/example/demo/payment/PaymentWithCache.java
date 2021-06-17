@@ -29,10 +29,10 @@ public class PaymentWithCache extends Payment {
 	public PaymentWithCache(int money, int playerID) {
 		
 		super();
-		System.out.println("cnstr"+ money + " " + playerID);
+	
 		this.money = money;
 		this.playerID = playerID;
-		System.out.println("cnstr"+ this.money + " " + this.playerID);
+	
 	}
 	
 
