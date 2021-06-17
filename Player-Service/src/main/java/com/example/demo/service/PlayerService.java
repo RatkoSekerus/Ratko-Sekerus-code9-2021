@@ -59,5 +59,11 @@ public class PlayerService {
 				.orElse(null);
 		return tp;
 	}
+	public void pay(int money,int id) {
+		System.out.println("servist");
+		TennisPlayer tp = getPlayerById(id);
+		playerRepository.updateMoney(money+tp.getMoney(), id);
+		
+	}
 	
 }

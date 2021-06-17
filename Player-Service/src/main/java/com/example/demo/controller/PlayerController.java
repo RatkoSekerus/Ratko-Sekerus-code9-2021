@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.payment.JsonForAllpayments;
+import com.example.demo.payment.Payment;
+
+import com.example.demo.payment.PaymentWithCache;
+import com.example.demo.payment.PaymentWithCard;
 import com.example.demo.service.PlayerService;
 
 import model.TennisAdmin;
@@ -26,6 +31,8 @@ public class PlayerController {
 	@Autowired
 	private PlayerService playerService;
 	
+
+	Payment payment;
 	
 	@PostMapping("addPlayer")
 	public ResponseEntity<TennisPlayer> addPlayer(@RequestBody TennisPlayer player) {
@@ -35,6 +42,18 @@ public class PlayerController {
 		} else {
 			return new ResponseEntity<>(tp,HttpStatus.OK);
 		}
+	}
+	@PostMapping("addMoney")
+	public ResponseEntity<TennisPlayer> addMoney(@RequestBody JsonForAllpayments paymentJson) {	
+		
+			if (paymentJson.getCardNumber() != 0 ) {
+				payment = new PaymentWithCard(paymentJson.getCardNumber(),paymentJson.getCcv(),paymentJson.getMoney(),paymentJson.getPlayerID());
+			} else {
+				payment = new PaymentWithCache(paymentJson.getMoney(),paymentJson.getPlayerID());
+			}
+			playerService.pay( payment.getMoney(),payment.getPlayerID());
+			return new ResponseEntity<>(HttpStatus.OK);
+	
 	}
 	
 	@PostMapping("deletePlayer")

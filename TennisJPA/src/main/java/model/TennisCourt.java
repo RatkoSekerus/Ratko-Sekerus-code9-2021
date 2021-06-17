@@ -20,10 +20,10 @@ public class TennisCourt implements Serializable {
 
 	private String name;
 
-	//bi-directional many-to-one association to TennisReservation
-//	@OneToMany(mappedBy="tennisCourt")
-//	private List<TennisReservation> tennisReservations;
-
+/*	//bi-directional many-to-one association to TennisReservation
+	@OneToMany(mappedBy="tennisCourt")
+	private List<TennisReservation> tennisReservations;
+*/
 	public TennisCourt() {
 	}
 
@@ -63,6 +63,6 @@ public class TennisCourt implements Serializable {
 		tennisReservation.setTennisCourt(null);
 
 		return tennisReservation;
-	}
-*/
+	}*/
+
 }

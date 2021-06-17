@@ -28,9 +28,7 @@ public class ReservationService {
 	public TennisReservation addReservation(TennisReservation r) {
 		Date start = r.getDateStart();
 		Date end = r.getDateEnd();
-		
-
-		
+	
 		if (!checkDuration(start,end)) {
 			return null;
 		}
@@ -38,17 +36,37 @@ public class ReservationService {
 		    return null;
 		}
 		if (!checkWorkTime(start,end)) {
+			
+			System.out.println("doesnt work");
 			return null;
 		} 
 		if (overlapping(start,end)) {
+			System.out.println("taken");
 			return null;
 		}	
 		if(reservedToday(r.getTennisPlayer().getPlayerID(),start)) {
-			System.out.println("rsrvd");
+			System.out.println("reserved");
 			return null;
 		}
+		if(needsToPay(r)) {
+			System.out.println("needs to pay");
+			return null;
+		}
+		
 		return reservationRepository.save(r);
 		
+	}
+	private boolean needsToPay(TennisReservation tr) {
+		Integer playerID = tr.getTennisPlayer().getPlayerID();
+		int slots = (int) ((Collection<TennisReservation>) reservationRepository.findAll()).stream()
+				.filter(r-> {return r.getTennisPlayer().getPlayerID() == playerID;})
+				.count();
+	//	int payed = tr.getTennisPlayer().getMoney();
+		
+	/*	if ( slots >= 5 && payed < 10 ) {
+		return true;
+		} */
+		return false;
 	}
 	public List<TennisReservation> reservations() {
 		return (List<TennisReservation>) reservationRepository.findAll();
