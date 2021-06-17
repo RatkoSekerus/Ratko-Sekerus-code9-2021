@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.payment.Payment;
 import com.example.demo.repository.PlayerRepository;
 
 import model.TennisAdmin;
@@ -59,7 +60,9 @@ public class PlayerService {
 				.orElse(null);
 		return tp;
 	}
-	public void pay(int money,int id) {
+	public void pay(Payment p) {
+		int id = p.getPlayerID();
+		int money = p.getMoney();
 		System.out.println("servist");
 		TennisPlayer tp = getPlayerById(id);
 		playerRepository.updateMoney(money+tp.getMoney(), id);

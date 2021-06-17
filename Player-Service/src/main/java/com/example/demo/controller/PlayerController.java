@@ -51,7 +51,7 @@ public class PlayerController {
 			} else {
 				payment = new PaymentWithCache(paymentJson.getMoney(),paymentJson.getPlayerID());
 			}
-			playerService.pay( payment.getMoney(),payment.getPlayerID());
+			playerService.pay( payment);
 			return new ResponseEntity<>(HttpStatus.OK);
 	
 	}

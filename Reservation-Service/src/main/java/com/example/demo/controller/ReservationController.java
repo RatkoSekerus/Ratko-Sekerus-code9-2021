@@ -34,6 +34,7 @@ public class ReservationController {
 			
 		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
 		} else {
+			reservationService.notifyListeners();
 			return new ResponseEntity<>(HttpStatus.OK);
 		}
 	}

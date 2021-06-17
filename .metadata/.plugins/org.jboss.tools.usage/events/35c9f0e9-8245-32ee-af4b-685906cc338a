@@ -1,9 +1,9 @@
-#Thu Jun 17 13:51:30 CEST 2021
+#Thu Jun 17 17:08:02 CEST 2021
 ct=jbt
 a=finishWizard
 c=0
-s=0
-d=1623930690866
+s=1
+d=1623942482634
 v=2.2.300
 vl=How many times the 'Finish' button pressed during the day
 cmp=usage

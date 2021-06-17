@@ -12,12 +12,15 @@ import org.springframework.web.client.RestTemplate;
 import com.example.demo.json.ReservationJSON;
 import com.example.demo.repository.ReservationRepository;
 
+import listeners.Listeners;
 import model.TennisCourt;
 import model.TennisPlayer;
 import model.TennisReservation;
 
 @Service
 public class ReservationService {
+	
+	private List<Listeners> listeners;
 	
 	@Autowired
 	ReservationRepository reservationRepository;
@@ -184,5 +187,12 @@ public class ReservationService {
 	
 	public void deletReservationById(Integer id) {
 		reservationRepository.deleteById(id);
+	}
+	public void notifyListeners() {
+		if (listeners != null ) {
+			for ( Listeners l : listeners) {
+				l.sendNotification();
+			}
+		}
 	}
 }
